@@ -1,7 +1,21 @@
 package Mathematics;
 
 public class Hcf {
+
+    int gcd(int a, int b){
+        int res =  Math.min(a, b);
+        while(res  > 0) {
+            if(a % res == 0 && b % res == 0) {
+                 break;
+            }
+            res--;
+        }
+        return res;
+    }
     public static void main(String[] args) {
         System.out.println("abc");
+        Hcf obj = new Hcf();
+        System.out.println(obj.gcd(15, 30));
+        System.out.println(obj.gcd(7, 13));
     }
 }
